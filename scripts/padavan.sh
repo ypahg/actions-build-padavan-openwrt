@@ -123,9 +123,8 @@ app(){
 
   if [ ! -d $WORK_DIR/toolchain-mipsel/$TOOL_DIR ]; then
     cd $WORK_DIR/toolchain-mipsel
-      echo '下载工具链'
-      sh ./dl_toolchain.sh
-    fi
+    echo '下载工具链'
+    sh ./dl_toolchain.sh
   fi
 
   # if [ ! -f $WORK_DIR/trunk/tools/go/go1.15.2.linux-amd64.tar.gz ]; then
