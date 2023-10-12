@@ -127,10 +127,11 @@ app(){
     sh ./dl_toolchain.sh
   fi
 
-  # if [ ! -f $WORK_DIR/trunk/tools/go/go1.15.2.linux-amd64.tar.gz ]; then
-  #   echo '下载go '
-  #   curl --create-dirs -L https://gomirrors.org/dl/go/go1.15.2.linux-amd64.tar.gz -o $WORK_DIR/trunk/tools/go/go1.15.2.linux-amd64.tar.gz
-  # fi
+  if [ ! -f $WORK_DIR/trunk/tools/go/go1.15.2.linux-amd64.tar.gz ]; then
+    echo '下载go '
+    curl --create-dirs -L https://go.p2hp.com/dl/go1.15.2.linux-amd64.tar.gz -o $WORK_DIR/trunk/tools/go/go1.15.2.linux-amd64.tar.gz
+    tar zxfv $WORK_DIR/trunk/tools/go/go1.15.2.linux-amd64.tar.gz -C go ;
+  fi
 
   if [ $LOGIN_FLAG = true ]; then
     \cp -f $BASE_DIR/public/$HTTP_FILE $WORK_DIR/trunk/user/httpd/httpd.c
