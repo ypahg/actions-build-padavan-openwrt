@@ -123,11 +123,6 @@ app(){
 
   if [ ! -d $WORK_DIR/toolchain-mipsel/$TOOL_DIR ]; then
     cd $WORK_DIR/toolchain-mipsel
-    if [ $TOOL_FLAG = true ]; then
-      echo '编译工具链'
-      ./clean_toolchain
-      ./build_toolchain
-    else
       echo '下载工具链'
       sh ./dl_toolchain.sh
     fi
