@@ -47,4 +47,4 @@ jobs:
         if: env.UPLOAD_FIRMWARE == 'true' && success() # 成功才执行
         with:
           name: Padavan-${{env.FILE_NAME}}
-          path: ${{ env.IMAGES_PATH }}
+          path: /opt/rt-n56u/trunk/images
