@@ -107,9 +107,10 @@ app(){
 
   echo '安装依赖'
   sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y autoclean
-  sudo apt-get -y install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot \
-    cpio git python-docutils gettext automake autopoint texinfo build-essential help2man \
-    pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev libc-dev-bin wget curl p7zip-full
+  sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd \
+	fakeroot kmod cpio git python-docutils gettext automake autopoint \
+	texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev \
+	libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin
 
   if [ -d $WORK_DIR ]; then
     echo '升级源码'
